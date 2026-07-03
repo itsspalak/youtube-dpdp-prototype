@@ -1,677 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube DPDP Prototype</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>YouTube DPDP Prototype</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="mobile">
+<div class="phone">
 
-<!-- STATUS BAR -->
+    <!-- Screen 1 -->
+    <section class="screen active">
 
-<div class="status-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="logo">
 
-<div>9:41</div>
+        <h1>Welcome to YouTube</h1>
 
-<div class="status-icons">
+        <p>
+            Learn, Explore and Watch safely.
+            <br><br>
+            To comply with India's DPDP Act,
+            we need to verify your age before
+            personalizing your experience.
+        </p>
 
-<span class="material-icons">signal_cellular_alt</span>
+        <button class="nextBtn">
+            Get Started
+        </button>
 
-<span class="material-icons">wifi</span>
+    </section>
 
-<span class="material-icons">battery_full</span>
+    <!-- Screen 2 -->
 
-</div>
+    <section class="screen">
 
-</div>
+        <h2>Tell us your age</h2>
 
-<!-- HEADER -->
+        <p>Enter your Date of Birth</p>
 
-<div class="topbar">
+        <input type="date">
 
-<button id="backBtn">
+        <button class="nextBtn">
+            Continue
+        </button>
 
-<span class="material-icons">
+    </section>
 
-arrow_back
+    <!-- Screen 3 -->
 
-</span>
+    <section class="screen">
 
-</button>
+        <div class="emoji">👨‍👩‍👧</div>
 
-<div class="title">
+        <h2>Parent Verification</h2>
 
-YouTube
+        <p>
 
-</div>
+            Since you're under 18,
+            a parent or guardian
+            must approve your account.
 
-<div></div>
+        </p>
 
-</div>
+        <input
+        type="text"
+        placeholder="Parent Mobile Number">
 
-<!-- PROGRESS -->
+        <button class="nextBtn">
 
-<div class="progress-wrapper">
+            Send OTP
 
-<div class="progress-text">
+        </button>
 
-Step
+    </section>
 
-<span id="stepNumber">
+    <!-- Screen 4 -->
 
-1
+    <section class="screen">
 
-</span>
+        <h2>Verify OTP</h2>
 
-of 7
+        <p>
 
-</div>
+            Enter the OTP
+            sent to your parent.
 
-<div class="progress">
+        </p>
 
-<div
+        <input
+        type="text"
+        placeholder="123456">
 
-id="progressBar"
+        <button class="nextBtn">
 
-class="progress-fill">
+            Verify
 
-</div>
+        </button>
 
-</div>
+    </section>
 
-</div>
+    <!-- Screen 5 -->
 
-<!-- ALL SCREENS -->
+    <section class="screen">
 
-<div id="screens">
+        <h2>
 
-<!-- ============================== -->
+            Privacy Preferences
 
-<!-- SCREEN 1 -->
+        </h2>
 
-<!-- ============================== -->
+        <div class="card">
 
-<section class="screen active">
+            <label>
 
-<img
+                <input
+                type="checkbox"
+                checked>
 
-class="youtube-logo"
+                Personalized Recommendations
 
-src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+            </label>
 
-<h1>
+        </div>
 
-Welcome to YouTube
+        <div class="card">
 
-</h1>
+            <label>
 
-<p>
+                <input
+                type="checkbox"
+                checked>
 
-Let's make your account
+                Learning Analytics
 
-safe, private and
+            </label>
 
-DPDP compliant.
+        </div>
 
-</p>
+        <div class="card">
 
-<div class="illustration">
+            <label>
 
-<span class="material-icons hero">
+                <input
+                type="checkbox">
 
-play_circle
+                Marketing Updates
 
-</span>
+            </label>
 
-</div>
+        </div>
 
-<button class="next">
+        <button class="nextBtn">
 
-Get Started
+            Accept & Continue
 
-</button>
+        </button>
 
-</section>
+    </section>
 
-<!-- ============================== -->
+    <!-- Screen 6 -->
 
-<!-- SCREEN 2 -->
+    <section class="screen">
 
-<!-- ============================== -->
+        <h2>
 
-<section class="screen">
+            Privacy Hub
 
-<div class="icon-circle">
+        </h2>
 
-<span class="material-icons">
+        <div class="privacy-card">
 
-cake
+            ✅ Parent Verified
 
-</span>
+        </div>
 
-</div>
+        <div class="privacy-card">
 
-<h2>
+            📥 Download My Data
 
-Tell us your age
+        </div>
 
-</h2>
+        <div class="privacy-card">
 
-<p>
+            🗑 Delete My Data
 
-We use your age to provide
+        </div>
 
-an age-appropriate
+        <div class="privacy-card">
 
-experience.
+            ⚙ Manage Consent
 
-</p>
+        </div>
 
-<label>
+        <button class="nextBtn">
 
-Date of Birth
+            Continue
 
-</label>
+        </button>
 
-<input
+    </section>
 
-type="date"
+    <!-- Screen 7 -->
 
-id="dob">
+    <section class="screen">
 
-<div class="info">
+        <div class="emoji">
 
-<span class="material-icons">
+            🎉
 
-info
+        </div>
 
-</span>
+        <h1>
 
-Your birthday is used only
+            You're Ready!
 
-for age verification.
+        </h1>
 
-</div>
+        <p>
 
-<button class="next">
+            Your account is now
+            DPDP compliant.
 
-Continue
+            <br><br>
 
-</button>
+            Enjoy YouTube safely.
 
-</section>
+        </p>
 
-<!-- ============================== -->
+        <button>
 
-<!-- SCREEN 3 -->
+            Start Watching
 
-<!-- ============================== -->
+        </button>
 
-<section class="screen">
-
-<div class="icon-circle">
-
-<span class="material-icons">
-
-verified_user
-
-</span>
-
-</div>
-
-<h2>
-
-Parent Verification
-
-</h2>
-
-<p>
-
-Because you're under 18,
-
-we need permission from
-
-your parent or guardian.
-
-</p>
-
-<label>
-
-Parent Mobile Number
-
-</label>
-
-<input
-
-type="tel"
-
-placeholder="+91 98XXXXXXXX"
-
-id="parentPhone">
-
-<div class="card">
-
-<span class="material-icons">
-
-security
-
-</span>
-
-<div>
-
-<h4>
-
-Your data stays protected
-
-</h4>
-
-<p>
-
-Only your parent can approve
-
-your account.
-
-</p>
-
-</div>
-
-</div>
-
-<button class="next">
-
-Send OTP
-
-</button>
-
-</section>
-<!-- ============================== -->
-<!-- SCREEN 4 -->
-<!-- ============================== -->
-
-<section class="screen">
-
-<div class="icon-circle">
-
-<span class="material-icons">
-
-sms
-
-</span>
-
-</div>
-
-<h2>
-
-Verify OTP
-
-</h2>
-
-<p>
-
-We've sent a verification code
-to your parent's mobile.
-
-</p>
-
-<div class="otp-container">
-
-<input maxlength="1">
-<input maxlength="1">
-<input maxlength="1">
-<input maxlength="1">
-<input maxlength="1">
-<input maxlength="1">
-
-</div>
-
-<div class="info">
-
-<span class="material-icons">
-
-schedule
-
-</span>
-
-OTP expires in 05:00 minutes
-
-</div>
-
-<button class="next">
-
-Verify
-
-</button>
-
-</section>
-
-<!-- ============================== -->
-<!-- SCREEN 5 -->
-<!-- ============================== -->
-
-<section class="screen">
-
-<div class="icon-circle">
-
-<span class="material-icons">
-
-shield
-
-</span>
-
-</div>
-
-<h2>
-
-Privacy Preferences
-
-</h2>
-
-<p>
-
-Choose how YouTube uses your
-data. You can change these
-later anytime.
-
-</p>
-
-<div class="toggle-card">
-
-<div>
-
-<h4>
-
-Personalized Recommendations
-
-</h4>
-
-<small>
-
-Improve recommendations using watch history
-
-</small>
-
-</div>
-
-<label class="switch">
-
-<input type="checkbox" checked>
-
-<span class="slider"></span>
-
-</label>
-
-</div>
-
-<div class="toggle-card">
-
-<div>
-
-<h4>
-
-Learning Analytics
-
-</h4>
-
-<small>
-
-Help improve educational content
-
-</small>
-
-</div>
-
-<label class="switch">
-
-<input type="checkbox" checked>
-
-<span class="slider"></span>
-
-</label>
-
-</div>
-
-<div class="toggle-card">
-
-<div>
-
-<h4>
-
-Marketing Updates
-
-</h4>
-
-<small>
-
-Receive product updates and offers
-
-</small>
-
-</div>
-
-<label class="switch">
-
-<input type="checkbox">
-
-<span class="slider"></span>
-
-</label>
-
-</div>
-
-<button class="next">
-
-Accept & Continue
-
-</button>
-
-</section>
-
-<!-- ============================== -->
-<!-- SCREEN 6 -->
-<!-- ============================== -->
-
-<section class="screen">
-
-<div class="icon-circle success">
-
-<span class="material-icons">
-
-verified
-
-</span>
-
-</div>
-
-<h2>
-
-Privacy Hub
-
-</h2>
-
-<p>
-
-Manage your privacy anytime.
-
-</p>
-
-<div class="dashboard-card">
-
-<span class="material-icons">
-
-verified_user
-
-</span>
-
-<div>
-
-<h4>
-
-Parent Verified
-
-</h4>
-
-<small>
-
-Verification successful
-
-</small>
-
-</div>
-
-</div>
-
-<div class="dashboard-card">
-
-<span class="material-icons">
-
-download
-
-</span>
-
-<div>
-
-<h4>
-
-Download My Data
-
-</h4>
-
-<small>
-
-Export your account data
-
-</small>
-
-</div>
-
-</div>
-
-<div class="dashboard-card">
-
-<span class="material-icons">
-
-delete
-
-</span>
-
-<div>
-
-<h4>
-
-Delete My Data
-
-</h4>
-
-<small>
-
-Erase your personal information
-
-</small>
-
-</div>
-
-</div>
-
-<div class="dashboard-card">
-
-<span class="material-icons">
-
-settings
-
-</span>
-
-<div>
-
-<h4>
-
-Manage Consent
-
-</h4>
-
-<small>
-
-Update privacy preferences
-
-</small>
-
-</div>
-
-</div>
-
-<button class="next">
-
-Continue
-
-</button>
-
-</section>
-
-<!-- ============================== -->
-<!-- SCREEN 7 -->
-<!-- ============================== -->
-
-<section class="screen">
-
-<div class="success-animation">
-
-<div class="check-circle">
-
-<span class="material-icons">
-
-check
-
-</span>
-
-</div>
-
-</div>
-
-<h1>
-
-You're All Set!
-
-</h1>
-
-<p>
-
-Your account is now compliant
-with India's DPDP Act.
-
-Your parent has successfully
-verified your account.
-
-</p>
-
-<button class="finish">
-
-Start Watching
-
-</button>
-
-</section>
-
-</div>
+    </section>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
