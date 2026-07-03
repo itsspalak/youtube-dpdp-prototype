@@ -15,43 +15,21 @@ background:#ECEFF3;
 
 display:flex;
 
-justify-content:center;
-
-align-items:center;
+flex-direction:column;
 
 height:100vh;
+
+max-width:480px;
+
+margin:0 auto;
+
+position:relative;
 
 }
 
 /* -----------------------------
-   MOBILE
+   WRAPPER
 ------------------------------*/
-
-.mobile{
-
-width:390px;
-
-height:844px;
-
-background:white;
-
-border-radius:42px;
-
-overflow:hidden;
-
-position:relative;
-
-display:flex;
-
-flex-direction:column;
-
-box-shadow:
-
-0 40px 80px rgba(0,0,0,.18),
-
-0 10px 25px rgba(0,0,0,.08);
-
-}
 
 /* -----------------------------
    STATUS BAR
@@ -673,23 +651,13 @@ display:none;
 RESPONSIVE
 ------------------------------*/
 
-@media(max-width:450px){
+@media(max-width:480px){
 
 body{
 
 background:white;
 
-}
-
-.mobile{
-
-width:100%;
-
-height:100vh;
-
-border-radius:0;
-
-box-shadow:none;
+max-width:100%;
 
 }
 
