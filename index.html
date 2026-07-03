@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube DPDP Prototype</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- Screen 1 -->
+    <section class="screen active">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="logo">
+
+        <h1>Welcome to YouTube</h1>
+
+        <p>
+            Learn, Explore and Watch safely.
+            <br><br>
+            To comply with India's DPDP Act,
+            we need to verify your age before
+            personalizing your experience.
+        </p>
+
+        <button class="nextBtn">
+            Get Started
+        </button>
+
+    </section>
+
+    <!-- Screen 2 -->
+
+    <section class="screen">
+
+        <h2>Tell us your age</h2>
+
+        <p>Enter your Date of Birth</p>
+
+        <input type="date">
+
+        <button class="nextBtn">
+            Continue
+        </button>
+
+    </section>
+
+    <!-- Screen 3 -->
+
+    <section class="screen">
+
+        <div class="emoji">👨‍👩‍👧</div>
+
+        <h2>Parent Verification</h2>
+
+        <p>
+
+            Since you're under 18,
+            a parent or guardian
+            must approve your account.
+
+        </p>
+
+        <input
+        type="text"
+        placeholder="Parent Mobile Number">
+
+        <button class="nextBtn">
+
+            Send OTP
+
+        </button>
+
+    </section>
+
+    <!-- Screen 4 -->
+
+    <section class="screen">
+
+        <h2>Verify OTP</h2>
+
+        <p>
+
+            Enter the OTP
+            sent to your parent.
+
+        </p>
+
+        <input
+        type="text"
+        placeholder="123456">
+
+        <button class="nextBtn">
+
+            Verify
+
+        </button>
+
+    </section>
+
+    <!-- Screen 5 -->
+
+    <section class="screen">
+
+        <h2>
+
+            Privacy Preferences
+
+        </h2>
+
+        <div class="card">
+
+            <label>
+
+                <input
+                type="checkbox"
+                checked>
+
+                Personalized Recommendations
+
+            </label>
+
+        </div>
+
+        <div class="card">
+
+            <label>
+
+                <input
+                type="checkbox"
+                checked>
+
+                Learning Analytics
+
+            </label>
+
+        </div>
+
+        <div class="card">
+
+            <label>
+
+                <input
+                type="checkbox">
+
+                Marketing Updates
+
+            </label>
+
+        </div>
+
+        <button class="nextBtn">
+
+            Accept & Continue
+
+        </button>
+
+    </section>
+
+    <!-- Screen 6 -->
+
+    <section class="screen">
+
+        <h2>
+
+            Privacy Hub
+
+        </h2>
+
+        <div class="privacy-card">
+
+            ✅ Parent Verified
+
+        </div>
+
+        <div class="privacy-card">
+
+            📥 Download My Data
+
+        </div>
+
+        <div class="privacy-card">
+
+            🗑 Delete My Data
+
+        </div>
+
+        <div class="privacy-card">
+
+            ⚙ Manage Consent
+
+        </div>
+
+        <button class="nextBtn">
+
+            Continue
+
+        </button>
+
+    </section>
+
+    <!-- Screen 7 -->
+
+    <section class="screen">
+
+        <div class="emoji">
+
+            🎉
+
+        </div>
+
+        <h1>
+
+            You're Ready!
+
+        </h1>
+
+        <p>
+
+            Your account is now
+            DPDP compliant.
+
+            <br><br>
+
+            Enjoy YouTube safely.
+
+        </p>
+
+        <button>
+
+            Start Watching
+
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
