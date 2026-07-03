@@ -41,6 +41,10 @@ overflow:hidden;
 
 position:relative;
 
+display:flex;
+
+flex-direction:column;
+
 box-shadow:
 
 0 40px 80px rgba(0,0,0,.18),
@@ -187,9 +191,9 @@ SCREENS
 
 #screens{
 
-height:680px;
+flex:1;
 
-overflow:hidden;
+min-height:0;
 
 position:relative;
 
@@ -199,9 +203,15 @@ position:relative;
 
 display:none;
 
+flex-direction:column;
+
 padding:35px 28px;
 
 height:100%;
+
+overflow-y:auto;
+
+-webkit-overflow-scrolling:touch;
 
 animation:fade .35s;
 
@@ -209,7 +219,13 @@ animation:fade .35s;
 
 .screen.active{
 
-display:block;
+display:flex;
+
+}
+
+.screen button{
+
+margin-top:auto;
 
 }
 
@@ -638,8 +654,6 @@ FINISH BUTTON
 ------------------------------*/
 
 .finish{
-
-margin-top:30px;
 
 background:linear-gradient(135deg,#FF0000,#FF4444);
 

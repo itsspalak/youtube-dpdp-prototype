@@ -10,6 +10,7 @@ const progressBar = document.getElementById("progressBar");
 const stepNumber = document.getElementById("stepNumber");
 
 let current = 0;
+let isAdult = false;
 
 // Show Screen
 function showScreen(index){
@@ -36,6 +37,19 @@ function showScreen(index){
 
 showScreen(current);
 
+// Calculate age from DOB string (YYYY-MM-DD)
+function calculateAge(dobString){
+    const parts=dobString.split("-");
+    const birthDate=new Date(+parts[0],+parts[1]-1,+parts[2]);
+    const today=new Date();
+    let age=today.getFullYear()-birthDate.getFullYear();
+    const monthDiff=today.getMonth()-birthDate.getMonth();
+    if(monthDiff<0||(monthDiff===0&&today.getDate()<birthDate.getDate())){
+        age--;
+    }
+    return age;
+}
+
 // ===============================
 // NEXT BUTTON
 // ===============================
@@ -44,53 +58,40 @@ nextButtons.forEach(button=>{
 
 button.addEventListener("click",()=>{
 
-    // Screen 2 Validation
+    // Screen 2 - Age Verification
     if(current===1){
-
         const dob=document.getElementById("dob").value;
-
         if(dob===""){
-
             alert("Please enter your Date of Birth");
-
             return;
-
         }
-
+        const age=calculateAge(dob);
+        if(age>=18){
+            isAdult=true;
+            current=4;
+            showScreen(current);
+            return;
+        }
     }
 
-    // Screen 3 Validation
+    // Screen 3 - Parent Phone
     if(current===2){
-
         const phone=document.getElementById("parentPhone").value.trim();
-
         if(phone.length<10){
-
             alert("Enter a valid Parent Mobile Number");
-
             return;
-
         }
-
     }
 
-    // Screen 4 Validation
+    // Screen 4 - OTP
     if(current===3){
-
         const otpInputs=document.querySelectorAll(".otp-container input");
-
         let otp="";
-
         otpInputs.forEach(input=>otp+=input.value);
-
         if(otp.length<6){
-
             alert("Please enter the complete OTP");
-
             return;
-
         }
-
     }
 
     if(current<screens.length-1){
@@ -110,15 +111,14 @@ button.addEventListener("click",()=>{
 // ===============================
 
 backBtn.addEventListener("click",()=>{
-
-if(current>0){
-
-current--;
-
-showScreen(current);
-
-}
-
+    if(current>0){
+        if(current===4&&isAdult){
+            current=1;
+        }else{
+            current--;
+        }
+        showScreen(current);
+    }
 });
 
 // ===============================
